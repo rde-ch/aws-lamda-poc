@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: lambda-postgres
+    restart: always
+    environment:
+      POSTGRES_DB: lambda_demo
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres2026
+    ports:
+      - "5434:5432"
+    volumes:
+      - ./data:/data
+
+volumes:
+  pgdata:
