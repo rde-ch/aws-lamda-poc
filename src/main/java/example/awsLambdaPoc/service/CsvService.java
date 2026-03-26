@@ -14,7 +14,6 @@ import java.sql.*;
 
 public class CsvService {
 
-
     private final S3Client s3Client = S3Client.builder().build();
 
     private static final String POSTGRES_URL = System.getenv("POSTGRES_URL");
@@ -101,12 +100,11 @@ public class CsvService {
         reader.readLine();
         CopyManager copyManager = new CopyManager(conn.unwrap(org.postgresql.core.BaseConnection.class));
         String copySql = """
-        COPY addressmig_green.dpa(
+        COPY lambda_demo.dpa(
             uprn,
             organisation_name,
             department_name,
             sub_building_name,
-            building_name,
             dependent_thoroughfare,
             thoroughfare,
             double_dependent_locality,
