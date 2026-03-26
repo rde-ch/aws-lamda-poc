@@ -1,0 +1,3 @@
+example/awsLambdaPoc/util/LambdaUtility.class
+example/awsLambdaPoc/handler/S3LambdaHandler.class
+example/awsLambdaPoc/service/CsvService.class
